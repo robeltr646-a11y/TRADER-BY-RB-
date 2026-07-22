@@ -136,3 +136,136 @@ signals[random];
 // প্রতি ১০ সেকেন্ডে পরিবর্তন
 
 setInterval(changeSignal,10000);
+
+// LIVE CANDLE SIMULATION
+
+
+let candleList = document.querySelectorAll(".candle");
+
+
+function liveCandle(){
+
+candleList.forEach(candle=>{
+
+
+let height =
+Math.floor(Math.random()*80)+50;
+
+
+let body =
+candle.querySelector(".body");
+
+
+let wick =
+candle.querySelector(".wick");
+
+
+
+body.style.height =
+height/2+"px";
+
+
+body.style.top =
+Math.random()*50+"px";
+
+
+
+wick.style.height =
+height+"px";
+
+
+
+let random =
+Math.random();
+
+
+if(random > 0.5){
+
+candle.classList.add("green");
+candle.classList.remove("red");
+
+}
+
+else{
+
+candle.classList.add("red");
+candle.classList.remove("green");
+
+}
+
+
+
+});
+
+
+}
+
+
+
+setInterval(liveCandle,2000);
+
+
+
+
+
+// AI MARKET SCANNER
+
+
+function runAI(){
+
+
+let market =
+[
+"CALL ↑",
+"PUT ↓",
+"WAIT"
+];
+
+
+let reason =
+[
+"Liquidity Sweep Detected",
+"Strong Rejection Candle",
+"Market Structure Changed",
+"Volume Confirmation"
+];
+
+
+
+let signal =
+document.querySelector(".signal h1");
+
+
+let text =
+document.querySelector(".signal p");
+
+
+
+let random =
+Math.floor(Math.random()*market.length);
+
+
+
+if(signal){
+
+signal.innerHTML =
+market[random];
+
+}
+
+
+
+if(text){
+
+text.innerHTML =
+"AI Reason: "+reason[random];
+
+}
+
+
+
+}
+
+
+
+setInterval(runAI,5000);
