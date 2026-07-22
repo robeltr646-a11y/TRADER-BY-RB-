@@ -732,8 +732,49 @@ height:130px;
 
 height:180px;
 
+.candle-chart{
+    display:flex !important;
+    height:220px;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin-top:100px;
 }
 
 
+.candle{
+    display:block !important;
+    width:18px;
+    height:150px;
+    position:relative;
+}
+
+
+.candle .wick{
+    display:block !important;
+    width:3px;
+    height:150px;
+    background:white;
+    position:absolute;
+    left:8px;
+}
+
+
+.candle .body{
+    display:block !important;
+    width:18px;
+    height:70px;
+    position:absolute;
+    top:40px;
+}
+
+
+.candle.green .body{
+    background:#00ff88 !important;
+}
+
+
+.candle.red .body{
+    background:#ff3344 !important;
 }
 
