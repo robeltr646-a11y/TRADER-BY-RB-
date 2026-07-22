@@ -346,4 +346,200 @@ margin:15px 0;
 
 color:#00ff99;
 
+/* MOBILE RESPONSIVE */
+
+@media(max-width:900px){
+
+
+.app{
+
+flex-direction:column;
+
+}
+
+
+/* Sidebar */
+
+.sidebar{
+
+width:100%;
+
+border-right:none;
+
+border-bottom:1px solid #25285a;
+
+}
+
+
+
+/* Main */
+
+.main{
+
+padding:10px;
+
+}
+
+
+
+.top{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+
+.top input{
+
+width:100%;
+
+padding:12px;
+
+background:#11172e;
+
+border:1px solid #25285a;
+
+border-radius:10px;
+
+color:white;
+
+}
+
+
+
+
+/* Chart */
+
+.chart{
+
+height:350px;
+
+}
+
+
+
+.candles{
+
+font-size:25px;
+
+margin-top:120px;
+
+}
+
+
+
+/* Cards */
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+
+/* AI Panel */
+
+.ai{
+
+width:100%;
+
+border-left:none;
+
+border-top:1px solid #25285a;
+
+}
+
+
+
+
+}
+
+
+
+/* Chart Glow Upgrade */
+
+
+.chart{
+
+box-shadow:
+0 0 20px rgba(130,40,255,0.3);
+
+overflow:hidden;
+
+}
+
+
+
+.zone{
+
+box-shadow:
+0 0 20px #9b4dff;
+
+}
+
+
+
+.support{
+
+box-shadow:
+0 0 20px #00ffff;
+
+}
+
+
+
+/* Signal Animation */
+
+
+.signal{
+
+animation:pulse 2s infinite;
+
+}
+
+
+
+@keyframes pulse{
+
+
+0%{
+
+box-shadow:0 0 5px red;
+
+}
+
+
+50%{
+
+box-shadow:0 0 25px red;
+
+}
+
+
+100%{
+
+box-shadow:0 0 5px red;
+
+}
+
+
+}
+
+
+
+/* Scroll Fix */
+
+
+body{
+
+overflow-x:hidden;
+
+}
+
+
 }
