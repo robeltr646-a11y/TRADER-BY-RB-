@@ -539,7 +539,100 @@ body{
 
 overflow-x:hidden;
 
+/* CANDLE CHART */
+
+
+.candle-chart{
+
+height:250px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:15px;
+
+margin-top:80px;
+
 }
 
 
+
+.candle{
+
+position:relative;
+
+width:18px;
+
+height:120px;
+
 }
+
+
+
+.candle .wick{
+
+position:absolute;
+
+width:3px;
+
+height:100%;
+
+background:white;
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+
+
+.candle .body{
+
+position:absolute;
+
+width:18px;
+
+height:60px;
+
+top:30px;
+
+border-radius:3px;
+
+}
+
+
+
+.green .body{
+
+background:#00ff88;
+
+}
+
+
+
+.red .body{
+
+background:#ff3344;
+
+}
+
+
+
+.green{
+
+height:150px;
+
+}
+
+
+
+.red{
+
+height:110px;
+
+}
+
