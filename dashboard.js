@@ -306,3 +306,60 @@ title.innerHTML = market;
 
 
 }
+// DEMO LIVE CANDLE
+
+
+let chart =
+document.getElementById("candleChart");
+
+
+function createCandles(){
+
+
+if(!chart) return;
+
+
+chart.innerHTML="";
+
+
+for(let i=0;i<25;i++){
+
+
+let candle =
+document.createElement("div");
+
+
+candle.className="candleBar";
+
+
+let height =
+Math.floor(Math.random()*120)+40;
+
+
+candle.style.height =
+height+"px";
+
+
+
+if(Math.random()>0.5){
+
+candle.classList.add("red");
+
+}
+
+
+chart.appendChild(candle);
+
+
+}
+
+
+}
+
+
+
+createCandles();
+
+
+setInterval(createCandles,3000);
+
