@@ -269,3 +269,40 @@ text.innerHTML =
 
 
 setInterval(runAI,5000);
+
+// MARKET SELECTOR
+
+
+let marketSelect = 
+document.getElementById("marketSelect");
+
+
+if(marketSelect){
+
+
+marketSelect.onchange = function(){
+
+
+let market = this.value;
+
+
+alert(
+"Selected Market: " + market
+);
+
+
+let title =
+document.querySelector(".market-title");
+
+
+if(title){
+
+title.innerHTML = market;
+
+}
+
+
+}
+
+
+}
