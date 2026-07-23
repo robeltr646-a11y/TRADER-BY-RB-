@@ -772,9 +772,38 @@ height:180px;
 .candle.green .body{
     background:#00ff88 !important;
 }
+   
 
 
 .candle.red .body{
     background:#ff3344 !important;
 }
 
+/* MARKET SELECT */
+
+.market-box select{
+
+background:#11172e;
+
+color:white;
+
+border:1px solid #6f35ff;
+
+padding:12px;
+
+border-radius:10px;
+
+font-size:15px;
+
+outline:none;
+
+}
+
+
+.market-box option{
+
+background:#080d20;
+
+color:white;
+
+}
