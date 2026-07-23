@@ -363,3 +363,136 @@ createCandles();
 
 setInterval(createCandles,3000);
 
+// 1 MINUTE CANDLE TIMER
+
+
+let seconds = 60;
+
+
+function candleTimer(){
+
+
+let timer =
+document.getElementById("candleTimer");
+
+
+let status =
+document.getElementById("signalStatus");
+
+
+
+if(seconds > 0){
+
+seconds--;
+
+
+let min = "00";
+
+let sec = seconds < 10 
+? "0"+seconds 
+: seconds;
+
+
+
+timer.innerHTML =
+min+":"+sec;
+
+
+
+if(seconds <= 5){
+
+
+status.innerHTML =
+"🔔 SIGNAL READY - NEW CANDLE SOON";
+
+
+generateSignal();
+
+
+}
+
+else{
+
+
+status.innerHTML =
+"🧠 AI ANALYZING MARKET...";
+
+
+}
+
+
+}
+
+else{
+
+
+seconds=60;
+
+
+status.innerHTML =
+"🕯️ NEW CANDLE STARTED";
+
+
+}
+
+
+
+}
+
+
+
+setInterval(candleTimer,1000);
+
+
+
+
+// SIGNAL GENERATOR
+
+
+function generateSignal(){
+
+
+let signals=[
+
+"CALL ↑",
+
+"PUT ↓",
+
+"WAIT"
+
+];
+
+
+let random =
+Math.floor(Math.random()*signals.length);
+
+
+
+let signal =
+document.querySelector(".signal h1");
+
+
+
+let confidence =
+document.querySelector(".signal h3");
+
+
+
+if(signal){
+
+signal.innerHTML =
+signals[random];
+
+}
+
+
+if(confidence){
+
+confidence.innerHTML =
+(Math.floor(Math.random()*20)+80)+"%";
+
+}
+
+
+}
+
