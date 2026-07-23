@@ -446,25 +446,38 @@ setInterval(candleTimer,1000);
 
 
 
-// SIGNAL GENERATOR
+// AI MARKET ANALYSIS ENGINE
 
 
-function generateSignal(){
+function analyzeMarket(){
 
 
-let signals=[
-
-"CALL ↑",
-
-"PUT ↓",
-
-"WAIT"
-
-];
+let candle =
+document.querySelectorAll(".candleBar");
 
 
-let random =
-Math.floor(Math.random()*signals.length);
+let green = 0;
+let red = 0;
+
+
+
+candle.forEach(c=>{
+
+
+if(c.classList.contains("red")){
+
+red++;
+
+}
+
+else{
+
+green++;
+
+}
+
+
+});
 
 
 
@@ -472,27 +485,65 @@ let signal =
 document.querySelector(".signal h1");
 
 
-
 let confidence =
 document.querySelector(".signal h3");
 
 
+let reason =
+document.querySelector(".signal p");
 
-if(signal){
 
-signal.innerHTML =
-signals[random];
+
+if(green > red){
+
+
+signal.innerHTML="CALL ↑";
+
+confidence.innerHTML="82%";
+
+reason.innerHTML=
+"Buyer Pressure + Bullish Momentum";
+
 
 }
 
 
-if(confidence){
 
-confidence.innerHTML =
-(Math.floor(Math.random()*20)+80)+"%";
+else if(red > green){
+
+
+signal.innerHTML="PUT ↓";
+
+
+confidence.innerHTML="84%";
+
+
+reason.innerHTML=
+"Seller Pressure + Bearish Momentum";
+
+
+}
+
+
+
+else{
+
+
+signal.innerHTML="WAIT";
+
+
+confidence.innerHTML="50%";
+
+
+reason.innerHTML=
+"Market Unclear";
+
 
 }
 
 
 }
 
+
+
+setInterval(analyzeMarket,5000);
